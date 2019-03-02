@@ -1,0 +1,70 @@
+table.table-base__datatable
+  thead.datatable__header
+    tr
+      th.table-check
+        input(type='checkbox')
+      th
+        | Nombre de servidor
+      th
+        | Hostname
+      th
+        | CPU
+      th
+        | RAM
+      th
+        | HDD
+      th
+        | Datacenter
+      th
+        | Status
+      th.data--center
+        | Acción
+  tbody.datatable__body
+    tr
+      td.table-check
+        input(type='checkbox')
+      td Servidor01-test
+      td server01.local
+      td 3.3 Ghz x 3
+      td 8 Gb
+      td 250 Gb
+      td PER_1
+      td
+        div.td-div-status-circle.td-div-status-active
+        span.td-span-status.td-span-status-active
+          | Activo
+      td.data--center
+        i.material-icons.action-table-options
+          | more_vert
+    tr
+      td.table-check
+        input(type='checkbox')
+      td Probando_servidor_04
+      td server02.demo
+      td 4.1 Ghz
+      td 10 Gb
+      td 1 Tb
+      td USA_3
+      td
+        div.td-div-status-circle.td-div-status-inactive
+        span.td-span-status.td-span-status-inactive
+          | Inactivo
+      td.data--center
+        i.material-icons.action-table-options
+          | more_vert
+    tr
+      td.table-check
+        input(type='checkbox')
+      td Servidor1234
+      td test.lan
+      td 4.1 Ghz 
+      td 4 Gb
+      td 500 Gb
+      td DEN_1
+      td
+        div.td-div-status-circle.td-div-status-alert
+        span.td-span-status.td-span-status-alert
+          | En alerta   
+      td.data--center
+        i.material-icons.action-table-options
+          | more_vert

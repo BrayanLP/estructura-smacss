@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+    - var home = true
+    - var organization = true
+    include _utils/head
+    body
+      //- Mixins
+      include _utils/mixins  
+      //- Header
+      include _components/header
+
+      //- Menu
+      include _components/sidenav
+      main
+         //- Module Principal 
+         include _components/toast
+      //- Footer
+      include _components/footer
+      //- Script Footer
+      include _utils/footer

@@ -1,0 +1,78 @@
+.card 
+  color: $text-standar
+  background: $white
+  border: 1px solid $light-2
+  box-sizing: border-box
+  border-radius: 3px
+  padding: 30px
+  margin-bottom: 30px
+  &.card-small
+    .container-header-card, .container-content-card, .container-footer-card
+      font-size: 12px
+    .container-icon-card
+      i.material-icons
+        font-size: 24px
+  &.card-standar
+    .container-header-card, .container-content-card, .container-footer-card
+      font-size: 16px
+    .container-icon-card
+      i.material-icons
+        font-size: 32px
+  &.card-big
+    .container-header-card, .container-content-card, .container-footer-card
+      font-size: 20px
+      line-height: 29px
+    .container-icon-card
+      i.material-icons
+        font-size: 64px
+.container-header-card 
+  display: flex
+  justify-content: space-between
+  font-weight: bold
+.container-content-card
+  margin: 30px 0 30px 0
+.container-footer-card
+  .container-multiple-buttons
+    ul 
+      padding: 0
+      li
+      list-style-type: none
+      text-decoration: underline
+  a
+    border: none
+    color: $secondary
+    cursor: pointer
+.container-button-card
+  display: flex
+  justify-content: flex-end
+.container-icon-card
+  i.material-icons
+    color: $darker-brand
+.container-title-card
+  display: flex
+  flex-direction: column
+  .subtitle-card
+    color: $text-lighter
+    font-weight: normal
+.title-card
+  margin-bottom: 7px
+.detalle
+  bottom: 0
+  width: 100%
+  height: 80px
+  vertical-align: middle
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #2D83D2
+  // position: fixed
+  // left: 50%
+  // @include translate(-50%, 0)
+  p
+    display: inline-block
+    width: 50%
+    line-height: 80px
+    padding: 0 1em
+    margin: 0
+    box-sizing: border-box
+    span
+    b
+      font-weight: bold
+    

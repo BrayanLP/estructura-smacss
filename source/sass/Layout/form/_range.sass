@@ -1,0 +1,108 @@
+/* Range
+ * ==========================================================================
+
+.range-field
+  position: relative
+
+input[type=range]
+  cursor: pointer
+  + .thumb
+    cursor: pointer
+  position: relative
+  background-color: transparent
+  border: none
+  outline: none
+  width: 100%
+  margin: 15px 0
+  padding: 0
+  &:focus
+    outline: none
+  + .thumb
+    position: absolute
+    top: 10px
+    left: 0
+    border: none
+    height: 0
+    width: 0
+    border-radius: 50%
+    background-color: $secondary
+    margin-left: 7px
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+    -webkit-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    .value
+      display: block
+      width: 30px
+      text-align: center
+      color: $secondary
+      font-size: 0
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+    &.active
+      border-radius: 50% 50% 50% 0
+      .value
+        color: #fff
+        margin-left: -1px
+        margin-top: 8px
+        font-size: 10px
+  -webkit-appearance: none
+  &::-webkit-slider-runnable-track
+    height: 3px
+    background: #c2c0c2
+    border: none
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    border: none
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background-color: $secondary
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+    margin: -5px 0 0 0
+    -webkit-transition: .3s
+    transition: .3s
+  &:focus::-webkit-slider-runnable-track
+    background: #ccc
+  /* fix for FF unable to apply focus style bug */
+  border: 1px solid white
+  /*required for proper track sizing in FF */
+  &::-moz-range-track
+    height: 3px
+    background: #ddd
+    border: none
+  &::-moz-range-thumb
+    border: none
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background: $secondary
+    margin-top: -5px
+  &:-moz-focusring
+    outline: 1px solid #fff
+    outline-offset: -1px
+  &:focus::-moz-range-track
+    background: #ccc
+  &::-ms-track
+    height: 3px
+    background: transparent
+    border-color: transparent
+    border-width: 6px 0
+    /*remove default tick marks */
+    color: transparent
+  &::-ms-fill-lower
+    background: #777
+  &::-ms-fill-upper
+    background: #ddd
+  &::-ms-thumb
+    border: none
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background: $secondary
+  &:focus
+    &::-ms-fill-lower
+      background: #888
+    &::-ms-fill-upper
+      background: #ccc

@@ -1,0 +1,94 @@
+h2 Crear un nuevo servidor
+p
+   | Escoge las características del servidor y aprovecha la flexibilidad de nuestra plataforma para que
+   br
+   | puedas escalar fácilmente tus servicios digitales. Si tienes dudas puedes revisar nuestra documentación acá.
+
+h4
+   | Nombre y ubicación
+ 
+
+form
+  h2 Inputs
+  .row
+    .input-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#first_name.validate(placeholder='Placeholder', type='text')
+      label.active(for='first_name') First Name
+    .input-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#last_name(type='text')
+      label(for='last_name') Last Name 
+    .input-field.input-field-icon.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#last_name(type='text')
+      .input-container_icon
+        i.material-icons.input_icon
+            | file_copy
+      label(for='last_name') Input con Copy
+    .input-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#disabled.validate(disabled='', value='I am not editable', type='text')
+      label.active(for='disabled') Deshabilitado 
+    .input-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#password.validate(type='password')
+      label(for='password') Password 
+    .input-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      input#email.validate(type='email')
+      label(for='email') Email 
+  h2 Textarea
+  .row
+    .input-field.textarea-field.col-xs-12.col-sm-8.col-md-6.col-lg-6
+      textarea#descripcion(class="textarea" ,name="descripcion")
+      label(for='descripcion') Descripcion 
+  h2 Radio Buttons
+  p
+    input#test1(name='group1', type='radio')
+    label(for='test1') Red
+  p
+    input#test2(name='group1', type='radio')
+    label(for='test2') Yellow
+  p
+    input#test3.with-gap(name='group1', type='radio')
+    label(for='test3') Green
+  p
+    input#test4(name='group1', type='radio', disabled='disabled')
+    label(for='test4') Brown
+
+  h2 Casillas de selección 
+  p
+    input#test5(type='checkbox')
+    label(for='test5') Red
+  p
+    input#test6(type='checkbox', checked='checked')
+    label(for='test6') Yellow
+  p
+    input#filled-in-box.filled-in(type='checkbox', checked='checked')
+    label(for='filled-in-box') Filled in
+  p
+    input#indeterminate-checkbox(type='checkbox')
+    label(for='indeterminate-checkbox') Indeterminate Style
+  p
+    input#test7(type='checkbox', checked='checked', disabled='disabled')
+    label(for='test7') Green
+  p
+    input#test8(type='checkbox', disabled='disabled')
+    label(for='test8') Brown
+
+  h2 Switches
+  // Switch
+  .switch
+    label
+      | Off
+      input(type='checkbox', checked=true)
+      span.lever
+      |       On
+  // Disabled Switch
+  p
+  p
+  .switch
+    label
+      | Off
+      input(disabled='', type='checkbox')
+      span.lever
+      |       On
+
+  h2 HTML5 Range
+  p.range-field
+    input#test5(type='range', min='0', max='100')

@@ -1,0 +1,275 @@
+ 
+// Branding colours
+$primary-light: #C673D7
+$primary-base: #8B50BC
+$secondary: #2D83D2
+$support: #F5CB35
+$black: #000
+$white: #fff
+$light-1: #FAFCFF
+$light-2: #F0F2F5
+$light-3: #E6E8EB
+$light-brand: #EAF3FB
+$darker-brand: #D0DBED
+$dark: #143752
+
+
+// Text colours
+$text-standar: #262D33
+$text-light: #565F66
+$text-lighter: #A8AEB2
+
+// Universal colours 
+$success: #00B78B
+$danger: #F74758
+
+// Icon colours
+$background-color: #F4F7FC
+
+$spacer: 1em !default;
+// Font-family to use in the whole project 
+body,html 
+    background: linear-gradient(180deg,$background-color 0%, #FFFFFF 100%)
+    font-family: 'Nunito Sans', sans-serif
+    margin: 0
+    overflow-y: auto
+    overflow-x: hidden 
+    height: 100%
+ 
+
+// Classes to get colours easily
+.primary-light
+    color: $primary-light
+.bg-primary-light
+    background-color: $primary-light
+
+
+.primary-base
+    color: $primary-base
+.bg-primary-base
+    background-color: $primary-base
+
+
+.secondary
+    color: $secondary
+.bg-secondary
+    background-color: $secondary
+
+
+.support
+    color: $support
+.bg-support
+    background-color: $support
+
+
+.white
+    color: $white
+.bg-white
+    background-color: $white
+
+
+.light-1
+    color: $light-1
+.bg-light-1
+    background-color: $light-1
+
+
+.light-2
+    color: $light-2
+.bg-light-2
+    background-color: $light-2
+
+
+.light-3
+    color: $light-3
+.bg-light-3
+    background-color: $light-3
+
+
+.light-brand
+    color: $light-brand
+.bg-light-brand
+    background-color: $light-brand
+
+
+.dark
+    color: $dark
+.bg-dark
+    background-color: $dark
+
+
+.text-standar
+    color: $text-standar
+.bg-text-standar
+    background-color: $text-standar
+
+
+.text-light
+    color: $text-light
+.bg-text-light
+    background-color: $text-light
+
+
+.text-lighter
+    color: $text-lighter
+.bg-text-lighter
+    background-color: $text-lighter
+
+
+.success
+    color: $success
+.bg-success
+    background-color: $success
+
+
+.danger
+    color: $danger
+.bg-danger
+    background-color: $danger
+
+.text-align-right
+    text-align: right
+@for $i from 0 through 5
+    @if $i == 0
+        .m-#{$i}
+            margin:  0em !important
+        .m-t-#{$i}
+            margin-top: 0em !important
+        .m-r-#{$i}
+            margin-right: 0em !important
+        .m-b-#{$i}
+            margin-bottom: 0em !important
+        .m-l-#{$i}
+            margin-left: 0em !important
+        .p-#{$i}
+            padding:  0em !important
+        .p-t-#{$i}
+            padding-top: 0em !important
+        .p-r-#{$i}
+            padding-right: 0em !important
+        .p-b-#{$i}
+            padding-bottom: 0em !important
+        .p-l-#{$i}
+            padding-left: 0em !important
+    @if $i == 1
+        .m-#{$i}
+            margin: ($spacer * .25) !important
+        .m-t-#{$i}
+            margin-top: ($spacer * .25) !important
+        .m-r-#{$i}
+            margin-right: ($spacer * .25) !important
+        .m-b-#{$i}
+            margin-bottom: ($spacer * .25) !important
+        .m-l-#{$i}
+            margin-left: ($spacer * .25) !important
+        .p-#{$i}
+            padding: ($spacer * .25) !important
+        .p-t-#{$i}
+            padding-top: ($spacer * .25) !important
+        .p-r-#{$i}
+            padding-right: ($spacer * .25) !important
+        .p-b-#{$i}
+            padding-bottom: ($spacer * .25) !important
+        .p-l-#{$i}
+            padding-left: ($spacer * .25) !important
+    @if $i == 2
+        .m-#{$i}
+            margin: ($spacer * .5) !important
+        .m-t-#{$i}
+            margin-top: ($spacer * .5) !important
+        .m-r-#{$i}
+            margin-right: ($spacer * .5) !important
+        .m-b-#{$i}
+            margin-bottom: ($spacer * .5) !important
+        .m-l-#{$i}
+            margin-left: ($spacer * .5) !important
+        .p-#{$i}
+            padding: ($spacer * .5) !important
+        .p-t-#{$i}
+            padding-top: ($spacer * .5) !important
+        .p-r-#{$i}
+            padding-right: ($spacer * .5) !important
+        .p-b-#{$i}
+            padding-bottom: ($spacer * .5) !important
+        .p-l-#{$i}
+            padding-left: ($spacer * .5) !important
+    @if $i == 3
+        .m-#{$i}
+            margin: ($spacer) !important
+        .m-t-#{$i}
+            margin-top: ($spacer) !important
+        .m-r-#{$i}
+            margin-right: ($spacer) !important
+        .m-b-#{$i}
+            margin-bottom: ($spacer) !important
+        .m-l-#{$i}
+            margin-left: ($spacer) !important
+        .p-#{$i}
+            padding: ($spacer) !important
+        .p-t-#{$i}
+            padding-top: ($spacer) !important
+        .p-r-#{$i}
+            padding-right: ($spacer) !important
+        .p-b-#{$i}
+            padding-bottom: ($spacer) !important
+        .p-l-#{$i}
+            padding-left: ($spacer) !important
+    @if $i == 4
+        .m-#{$i}
+            margin:  ($spacer * 1.5) !important
+        .m-t-#{$i}
+            margin-top: ($spacer * 1.25) !important
+        .m-r-#{$i}
+            margin-right: ($spacer * 1.25) !important
+        .m-b-#{$i}
+            margin-bottom: ($spacer * 1.25) !important
+        .m-l-#{$i}
+            margin-left: ($spacer * 1.25) !important
+        .p-#{$i}
+            padding:  ($spacer * 1.5) !important
+        .p-t-#{$i}
+            padding-top: ($spacer * 1.25) !important
+        .p-r-#{$i}
+            padding-right: ($spacer * 1.25) !important
+        .p-b-#{$i}
+            padding-bottom: ($spacer * 1.25) !important
+        .p-l-#{$i}
+            padding-left: ($spacer * 1.25) !important
+
+    @if $i == 5
+        .m-#{$i}
+            margin: ($spacer * 3) !important
+        .m-t-#{$i}
+            margin-top: ($spacer * 3) !important
+        .m-r-#{$i}
+            margin-right: ($spacer * 3) !important
+        .m-b-#{$i}
+            margin-bottom: ($spacer * 3) !important
+        .m-l-#{$i}
+            margin-left: ($spacer * 3) !important
+        .p-#{$i}
+            padding: ($spacer * 3) !important
+        .p-t-#{$i}
+            padding-top: ($spacer * 3) !important
+        .p-r-#{$i}
+            padding-right: ($spacer * 3) !important
+        .p-b-#{$i}
+            padding-bottom: ($spacer * 3) !important
+        .p-l-#{$i}
+            padding-left: ($spacer * 3) !important
+
+ul.inline
+    li
+        display: inline-block
+        margin-right: 1em
+
+
+.floating-right
+    position: absolute
+    top: 0
+    right: 0 
+i
+    &.floating-right
+        @extend .primary-light
+        font-size: 30px
+        // @extend .floating.right

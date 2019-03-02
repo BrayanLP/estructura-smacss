@@ -1,0 +1,44 @@
+- var n = 0;
+- var menu = [{icon: 'dashboard',title: 'Home',link:'index'},{icon: 'dns',title: 'Card',link:'card'},{icon: 'sd_storage',title: 'Botones', link: 'buttons'},{icon: 'device_hub', title: 'Code', link: 'code'},{icon: 'device_hub',title: 'Formulario', link: 'forms'},{icon: 'device_hub',title: 'Mensajes de error', link: 'toast'},{icon: 'device_hub',title: 'Buscador', link: 'searcher'},{icon: 'device_hub',title: 'Barra de progreso', link: 'progress_bar'},{icon: 'device_hub',title: 'Error 404', link: 'error_404'},{icon: 'device_hub',title: 'Registro exitoso', link: 'successful_register'},{icon: 'more_horiz',title: 'Tipografia', link:'typography'},{icon:'divider'},{icon: 'settings',title: 'Configuración'},{icon: 'local_atm',title: 'Centros de pagos'},{icon: 'lock',title: 'Seguridad'}]
+
+ul.sidenav 
+   each val in  menu
+      if val.icon === 'sd_storage'
+         li.active
+            a(href=val.link+".html")
+               i.material-icons
+                  | #{val.icon}
+               | #{val.title}
+               //- | #{val.link + ".html"}
+      else if val.icon === 'divider'
+         li
+            .divider
+      else if val.icon === 'more_horiz'
+         li
+            a(href=val.link+".html")
+               i.material-icons
+                  | #{val.icon}
+               | #{val.title}
+            ul
+               li
+                  a(href=val.link+".html")
+                     i.material-icons
+                        | photo_camera
+                     | Snapshot Snapshot Snapshot
+               li
+                  a(href=val.link+".html")
+                     i.material-icons
+                        | photo_camera
+                     | Backups
+               li
+                  a(href=val.link+".html")
+                     i.material-icons
+                        | photo_camera
+                     | Aplicaciones
+
+      else
+         li
+            a(href=val.link+".html")
+               i.material-icons
+                  | #{val.icon}
+               | #{val.title} 

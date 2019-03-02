@@ -1,0 +1,456 @@
+
+.table-container
+  display: block
+  // position: relative
+  // width: 100%
+  .option-icons
+    @extend .m-b-4
+    width: 100%
+    display: flex
+    align-items: center
+    position: relative
+    h4
+      // @extend .m-b-0
+      display: inline-block
+      color: #444
+    // position: absolute
+    // right: 0
+    // bottom: 0
+    p
+      @extend .m-0
+    .floating
+      position: absolute
+      right: 0
+      bottom: 0
+
+table-base, .table-base
+  position: relative
+
+ 
+.table-base--container, .table-base
+  width: 100%
+  display: block
+  margin-top: 20px
+  overflow-x: auto
+
+.table-base__datatable
+  text-align: left
+  width: 100%
+  background-color: $white
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1)
+
+.datatable__header .data--left, .datatable__body .data--left, .datatable__footer .data--left
+  text-align: left
+
+.datatable__header .data--center, .datatable__body .data--center, .datatable__footer .data--center
+  text-align: center
+
+.datatable__header .data--right, .datatable__body .data--right, .datatable__footer .data--right
+  text-align: right
+
+.datatable__header .data--thin, .datatable__body .data--thin, .datatable__footer .data--thin
+  width: 100px
+
+.datatable__header .data--medium, .datatable__body .data--medium, .datatable__footer .data--medium
+  width: 150px
+
+.datatable__header .data--large, .datatable__body .data--large, .datatable__footer .data--large
+  width: 220px
+
+.datatable__header .data--xl, .datatable__body .data--xl, .datatable__footer .data--xl
+  width: 300px
+
+.datatable__header .data--extra-large, .datatable__body .data--extra-large, .datatable__footer .data--extra-large
+  width: 350px
+
+.datatable__header .data--08em, .datatable__body .data--08em, .datatable__footer .data--08em
+  font-size: 0.8em
+
+.datatable__header .data--2em, .datatable__body .data--2em, .datatable__footer .data--2em
+  font-size: 2em
+
+.datatable__header 
+  th, th a
+    color: $text-light
+    font-size: 0.64em
+    text-transform: uppercase
+    font-weight: 700
+    padding: 15px
+    position: relative
+    border-bottom: 1px solid #EEE
+    font-size: 10.24px
+  th a
+    text-decoration: none
+    padding: 0
+    border: none
+    i
+      vertical-align: middle
+  
+
+.datatable__body tr
+  border-bottom: 1px solid #EEEE
+  &:last-child
+    border-bottom: none
+.datatable__body td
+  padding: 12px
+  color: $black
+  font-size: 1em
+  vertical-align: top
+
+.datatable__actions
+  padding: 12px 0
+  text-align: center
+  a
+    position: relative
+    display: inline-block
+    margin: 0 10px
+    transition: color 0.1s
+    &:hover
+      color: red
+  i
+    font-size: 1.1em
+  loading-spin, .loading-spin
+    position: relative
+    top: auto
+    right: 0
+    height: 16px
+    width: 16px
+    display: block
+
+.table-base__progress-bar
+  height: 0.2em
+  position: absolute
+  background-color: #5ac8fa
+  animation: horizontal-progress 0.9s cubic-bezier(0.45, 0, 1, 1) infinite
+  top: 48px
+
+@keyframes horizontal-progress
+  0%, 100%
+    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85)
+
+  0%
+    width: 0
+
+  100%
+    width: 100%
+
+.data--action, .table-check
+  padding: 0 !important
+  vertical-align: middle !important
+.datatable-label
+  display: inline-block
+  margin: 0 2px
+  padding: 4px 5px
+  width: 90px
+  color: #fff
+  font-size: 0.62em
+  font-weight: 700
+  line-height: 1
+  text-align: center
+  text-overflow: ellipsis
+  text-transform: uppercase
+  vertical-align: middle
+  white-space: nowrap
+  border-radius: 2px
+  overflow: hidden
+  span
+    font-weight: 700
+  .tooltip__text
+    line-height: 19.6px
+    text-transform: capitalize
+  &.label--danger
+    background-color: #d9534f
+  &.label--default
+    background-color: #777
+  &.label--success
+    background-color: #4ac768
+  &.label--warning
+    background-color: #f0ad4e
+  &.label-xs
+    width: 40px
+
+.label-danger
+  color: #fd7572
+
+.label-default
+  color: #777
+
+.label-success
+  color: #4dcb70
+
+.label-warning
+  color: #f0ad4e
+
+.data--multiline
+  white-space: pre-line
+
+.datatable-check
+  display: inline-block
+  position: relative
+  width: 20px
+  p
+    text-align: center
+    input[type=checkbox]
+      visibility: hidden
+      &:checked + label:after
+        opacity: 1
+    label
+      border: 2px solid red
+      cursor: pointer
+      height: 20px
+      left: 0
+      position: absolute
+      top: 0
+      width: 20px
+      border-radius: 2px
+      &:after
+        content: ''
+        background: transparent
+        border: 3px solid red
+        border-right: none
+        border-top: none
+        height: 6px
+        left: 3px
+        opacity: 0
+        position: absolute
+        top: 4px
+        transform: rotate(-45deg)
+        transition: 0.3s
+        width: 11px
+      &:hover::after
+        opacity: 0.2
+    + label
+      margin-left: 10px
+      cursor: pointer
+
+.dropdown--open
+  tooltip
+    opacity: 0
+  .datatable__dropdown
+    transform: scale(1)
+
+.datatable__input
+  display: block
+  padding: 5px
+  width: 100%
+  border: 1px solid #e7e6ec
+  &:focus
+    border-color: #85b7d9
+  &:disabled
+    background-color: transparent
+    border-color: transparent
+
+.datatable__dropdown
+  position: fixed
+  top: 100%
+  left: 0
+  z-index: 12
+  padding: 5px
+  text-align: left
+  background-color: #fff
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12)
+  transform: scale(0)
+  transform-origin: top right
+  transition: 0.3s transform ease-in-out
+  &.datatable__dropdown--open
+    display: inline-block
+  .dropdown__list
+    display: flex
+    align-items: center
+    padding: 6px 8px
+    width: 100%
+    color: gray
+    &:hover
+      background-color: #f1f3f4
+  i
+    margin-right: 4px
+
+.datatable__sort
+  position: absolute
+  top: 50%
+  right: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  transform: translateY(-50%)
+  i
+    position: relative
+    cursor: pointer
+    z-index: 1
+  .sort--disabled
+    pointer-events: none
+    opacity: 0.5
+    z-index: -1
+
+/* datatable type
+
+.table-base--clean .table-base__datatable
+  border-collapse: collapse
+
+.table-base--collapse
+  .table-base__datatable
+    border-collapse: collapse
+  .datatable__header
+    border-bottom: 3px solid #edf0f2
+  .datatable__body tr
+    border-bottom: 1px solid #edf0f2
+
+.table-base--clean
+  .datatable__body tr
+    &:first-child
+      border-top: 1px solid black
+    &:last-child
+      border-bottom: 1px solid black
+  .datatable__footer
+    td
+      padding: 5px 15px
+      font-weight: bold
+      text-transform: uppercase
+    tr:first-child td
+      padding-top: 15px
+
+.table--base--row-event
+  .datatable__body tr:hover,
+  .datatable__body tr
+    cursor: pointer
+    transition: 0.3s background ease-in-out
+    &.row--active
+      background-color: #ff8f8f
+
+.datatable__percentage-container
+  background-color: gray
+  height: 1.5em
+  position: relative
+  width: 100%
+
+.datatable__percentage-bar
+  background-color: #757575
+  height: 100%
+  line-height: inherit
+  position: absolute
+  transition: 0.3s all
+  &.bar-green
+    background-color: green
+  &.bar-yellow, &.bar-red
+    background-color: red
+  &.empty-bar
+    width: 100% !important
+    background-color: rgba(0, 128, 0, 0.2)
+
+.percentage-value
+  color: white
+  font-size: 0.8em
+  font-weight: 500
+  text-align: center
+
+.failed-message
+  color: red
+  width: 280px
+  max-width: 100%
+  overflow: hidden
+  text-align: center
+  font-size: 0.9em
+  .failed-message--action
+    background-color: #f5f5f5
+    padding: 3px 5px 0
+    color: blue
+    border-radius: 2px
+    &:hover
+      color: red
+
+.wrapper-progress-bar
+  overflow: hidden
+  width: 280px
+  max-width: 100%
+
+.progress-bar--message
+  display: block
+  font-size: 0.75em
+  line-height: 13px
+
+.progress-bar
+  height: 12px
+  background-color: gray
+  border-radius: 10px
+  overflow: hidden
+
+.bar-stripped--progress
+  background-image: linear-gradient(-45deg, #e60000 25%, red 25%, red 50%, #e60000 50%, #e60000 75%, red 75%, red)
+  background-size: 40px 40px
+  height: 100%
+  animation: progress-bar-stripes 0.35s linear infinite
+  font-size: 0.65em
+  line-height: 12px
+  font-weight: bold
+  color: white
+  transition: width 0.3s
+
+@keyframes progress-bar-stripes
+  from
+    background-position: 40px 0
+
+  to
+    background-position: 0 0
+
+
+#circleG
+  display: inline-block
+  margin: auto
+
+.circleG
+  background-color: rgba(255, 255, 255, 0)
+  display: inline-block
+  height: 2px
+  width: 2px
+  animation: bounce_circleG 2.24s infinite normal
+  border-radius: 50%
+
+#circleG_1
+  animation-delay: 0.45s
+
+#circleG_2
+  animation-delay: 1.05s
+
+#circleG_3
+  animation-delay: 1.35s
+
+@keyframes bounce_circleG
+  50%
+    background-color: gray
+
+.table-check
+  width: 80px
+  text-align: center  
+  p
+    height: 20px
+    input[type="checkbox"]+label
+      padding-left: 20px
+    [type="checkbox"]+label:before
+      height: 16px 
+      width: 16px
+    input[type="checkbox"]:checked+label:before
+      width: 5px
+      height: 16px
+
+
+
+.action-table-options
+  color: $secondary
+  cursor: pointer
+  vertical-align: middle
+
+.td-span-status
+  text-transform: lowercase
+
+.td-div-status-circle
+  height: 10px
+  width: 10px
+  margin-right: 8px
+  border-radius: 10px
+  display: inline-block
+  background-color: $text-lighter
+  &.td-div-status-active
+    background-color: $success
+  &.td-div-status-alert
+    background-color: $danger
