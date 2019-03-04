@@ -128,7 +128,7 @@ gulp.task('build:js', function() {
     //Concatenamos en un solo archivo todos los JS
     .pipe(concat('app.min.js'))
     //ruta donde guardaremos el archivo
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./congreso-bellas-artes/js'));
   // .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/js'))
 });
 
