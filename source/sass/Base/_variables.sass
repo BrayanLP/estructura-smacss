@@ -1,275 +1,166 @@
- 
-// Branding colours
-$primary-light: #C673D7
-$primary-base: #8B50BC
-$secondary: #2D83D2
-$support: #F5CB35
-$black: #000
-$white: #fff
-$light-1: #FAFCFF
-$light-2: #F0F2F5
-$light-3: #E6E8EB
-$light-brand: #EAF3FB
-$darker-brand: #D0DBED
-$dark: #143752
+// ===============
+//  Elastika Variables
+// ===============
+
+// Colors
+$primary-color: #583b1b
+$second-color: #d6ae2d
+$secondary-color: #d6ae2d
+$third-color: #b32f2f
+//$primary-color: color('purple', 'base') !default
+$primary-color-light: color('purple','lighten-1') !default
+//$secondary-color: color('blue', 'base') !default
+$secondary-color-dark : color('blue','darken-1') !default
+$body-color: color('blue', 'lighten-2') !default
+$success-color: color('green', 'base') !default
+$error-color: color('red','base') !default
+$warning-color: color('yellow', 'base') !default
+$dark-color: color('grey','darken-1') !default
+$pending-color: $dark-color
+$white: color('shades', 'white') !default
+$black: color('shades', 'black') !default
+$transparent: color('shades', 'transparent') !default
+
+// Divider 
+// $color-divider: color('grey', 'lighten-3') !default
+// $divider-color: color('grey', 'lighten-3') !default
+
+// Typography 
+// $typography-color: color('brown', 'base') !default
+// $typography-color-lighter: color('grey','darken-3') !default
+// $typography-color-dark: color('grey', 'darken-1') !default
+// $h1-fontsize: 2.441em !default;
+// $h2-fontsize: 1.953em !default;
+// $h3-fontsize: 1.563em !default;
+// $h4-fontsize: 1.250em !default;
+// $h5-fontsize: 1em !default;
+// $h6-fontsize: 0.8em !default;
+
+// Alert
+// $alert-color: color('brown', 'base') !default
+// $alert-color-background-error: rgba($error-color, 0.1) !default
+// $alert-color-error: $error-color
+// $alert-border-error: 1px solid $error-color
+
+// $alert-color-background-success: rgba($success-color, 0.1) !default
+// $alert-color-success: $success-color
+// $alert-border-success: 1px solid $success-color
+
+// $alert-color-background-warning: rgba($warning-color, 0.1) !default
+// $alert-color-warning: $warning-color
+// $alert-border-warning: 1px solid $warning-color
+
+// $alert-color-background-info: rgba(color('blue','base'), 0.1) !default
+// $alert-color-info: color('blue','base')
+// $alert-border-info: 1px solid color('blue','base')
 
 
-// Text colours
-$text-standar: #262D33
-$text-light: #565F66
-$text-lighter: #A8AEB2
+// BreadCrumb
 
-// Universal colours 
-$success: #00B78B
-$danger: #F74758
+// Button
+$button-color-background-primary: linear-gradient(90deg, $primary-color-light 0%, $primary-color 100%) !default
+$button-color-background-primary-hover: $primary-color
 
-// Icon colours
-$background-color: #F4F7FC
+$button-color-background-outline-dark: color('shades', 'transparent') !default
+$button-color-background-outline-dark-hover: $secondary-color-dark
+$button-border-outline-dark: 2px solid $secondary-color-dark
+$button-color-outline-dark: $secondary-color-dark
+
+
+$button-color-background-outline-clear: color('shades', 'transparent') !default
+$button-color-background-outline-clear-hover: $white 
+$button-color-outline-clear: $secondary-color-dark
+
+$button-color-background-thinner: color('shades', 'transparent') !default
+$button-color-background-thinner-hover: color('grey', 'lighten-4') !default 
+$button-color-thinner: $secondary-color
+    
+$button-color-alert: $error-color
+    
+// Card
+$card-color: color('brown','base') !default
+$card-border: 1px solid color('grey', 'lighten-2') !default
+$card-bg: color('shades','white')
+$card-color-icon: color('grey', 'darken-1')
+// $card-text: color('brown', 'darken')
+
+
+// Code
+$code-color-background: color('blue','darken-1') !default
+
+// Container
+
+// Error Page
+
+// Footer
+
+// Forms
+
+// Header
+$header-color-background: color('blue','darken-1') !default
+$header-color: color('shades', 'white') !default
+$header-border: 1px solid color('grey', 'darken-3')
+$header-color-span: color('grey', 'darken-1') !default
+
+// Modal
+$modal-shadow: 0px 4px 8px rgba(color('blue','darken-1'),0.1) 
+$modal-overlay: rgba(color('blue','darken-1'),0.8) !default
+$modal-color-icon: color('grey', 'lighten-3') !default
+    
+// Preload
+$preload-color-background: color('blue','darken-1') !default
+$preload-border-width: 7px !default
+$preload-border-donut: $preload-border-width solid rgba($white, 1)
+$preload-border-donut-left: $preload-border-width solid $primary-color
+$preload-border-spinner: ($preload-border-width + 2px) solid $transparent
+$preload-border-spinner-top: ($preload-border-width + 2px) solid color('grey','lighten-1')
+$preload-border-circle: $preload-border-width solid rgba($white, 1)	
+
+// Progress
+$progress-color-background: color('grey', 'lighten-3')
+$progress-color-number: color('blue','darken-1')
+$progress-bar-color: color('purple','base')
+
+
+// Sidenav
+$sidenav-color-background: color('shades', 'white') !default
+$sidenav-color-background-hover: lighten($secondary-color, 45%) !default
+$sidenav-shadow: 1px 2px 2px rgba(color('blue','darken-1'), 0.1) !default
+$sidenav-color: color('grey', 'darken-3') !default
+$sidenav-color-icon: color('grey','darken-1') !default
+$sidenav-color-icon-hover: $secondary-color !default
+
+    
+// Table
+$table-color-background: $white
+$table-shadow: 1px 2px 2px rgba($black,.1)
+$table-border: 1px solid color('grey','lighten-2')
+$table-a: color('grey','darken-3') !default
+$table-color-a: color('blue', 'base') !default
+// State
+
+// Comming Soon
+$coming-soon-color: color('blue','darken-1')
+$coming-soon-background: color('grey','darken-2')
+
+
+// Disabled
+$disabled-no-drop: color('grey','darken-1')
 
 $spacer: 1em !default;
 // Font-family to use in the whole project 
-body,html 
-    background: linear-gradient(180deg,$background-color 0%, #FFFFFF 100%)
-    font-family: 'Nunito Sans', sans-serif
-    margin: 0
-    overflow-y: auto
-    overflow-x: hidden 
-    height: 100%
- 
-
-// Classes to get colours easily
-.primary-light
-    color: $primary-light
-.bg-primary-light
-    background-color: $primary-light
 
 
-.primary-base
-    color: $primary-base
-.bg-primary-base
-    background-color: $primary-base
+//MODULES
 
+// Landing Home
+$p-color-primary: color('grey','darken-3')
+$p-color-alternative: color('brown','base')
+$li-color-primary: color('grey','darken-3')
+$background-color-grey: color('grey','lighten-2')
+$background-color-footer: color('blue','darken-1')
+$h-color-lighten: color('yellow','lighten-1')
+$nav-color-primary: color('blue', 'darken-1')
 
-.secondary
-    color: $secondary
-.bg-secondary
-    background-color: $secondary
-
-
-.support
-    color: $support
-.bg-support
-    background-color: $support
-
-
-.white
-    color: $white
-.bg-white
-    background-color: $white
-
-
-.light-1
-    color: $light-1
-.bg-light-1
-    background-color: $light-1
-
-
-.light-2
-    color: $light-2
-.bg-light-2
-    background-color: $light-2
-
-
-.light-3
-    color: $light-3
-.bg-light-3
-    background-color: $light-3
-
-
-.light-brand
-    color: $light-brand
-.bg-light-brand
-    background-color: $light-brand
-
-
-.dark
-    color: $dark
-.bg-dark
-    background-color: $dark
-
-
-.text-standar
-    color: $text-standar
-.bg-text-standar
-    background-color: $text-standar
-
-
-.text-light
-    color: $text-light
-.bg-text-light
-    background-color: $text-light
-
-
-.text-lighter
-    color: $text-lighter
-.bg-text-lighter
-    background-color: $text-lighter
-
-
-.success
-    color: $success
-.bg-success
-    background-color: $success
-
-
-.danger
-    color: $danger
-.bg-danger
-    background-color: $danger
-
-.text-align-right
-    text-align: right
-@for $i from 0 through 5
-    @if $i == 0
-        .m-#{$i}
-            margin:  0em !important
-        .m-t-#{$i}
-            margin-top: 0em !important
-        .m-r-#{$i}
-            margin-right: 0em !important
-        .m-b-#{$i}
-            margin-bottom: 0em !important
-        .m-l-#{$i}
-            margin-left: 0em !important
-        .p-#{$i}
-            padding:  0em !important
-        .p-t-#{$i}
-            padding-top: 0em !important
-        .p-r-#{$i}
-            padding-right: 0em !important
-        .p-b-#{$i}
-            padding-bottom: 0em !important
-        .p-l-#{$i}
-            padding-left: 0em !important
-    @if $i == 1
-        .m-#{$i}
-            margin: ($spacer * .25) !important
-        .m-t-#{$i}
-            margin-top: ($spacer * .25) !important
-        .m-r-#{$i}
-            margin-right: ($spacer * .25) !important
-        .m-b-#{$i}
-            margin-bottom: ($spacer * .25) !important
-        .m-l-#{$i}
-            margin-left: ($spacer * .25) !important
-        .p-#{$i}
-            padding: ($spacer * .25) !important
-        .p-t-#{$i}
-            padding-top: ($spacer * .25) !important
-        .p-r-#{$i}
-            padding-right: ($spacer * .25) !important
-        .p-b-#{$i}
-            padding-bottom: ($spacer * .25) !important
-        .p-l-#{$i}
-            padding-left: ($spacer * .25) !important
-    @if $i == 2
-        .m-#{$i}
-            margin: ($spacer * .5) !important
-        .m-t-#{$i}
-            margin-top: ($spacer * .5) !important
-        .m-r-#{$i}
-            margin-right: ($spacer * .5) !important
-        .m-b-#{$i}
-            margin-bottom: ($spacer * .5) !important
-        .m-l-#{$i}
-            margin-left: ($spacer * .5) !important
-        .p-#{$i}
-            padding: ($spacer * .5) !important
-        .p-t-#{$i}
-            padding-top: ($spacer * .5) !important
-        .p-r-#{$i}
-            padding-right: ($spacer * .5) !important
-        .p-b-#{$i}
-            padding-bottom: ($spacer * .5) !important
-        .p-l-#{$i}
-            padding-left: ($spacer * .5) !important
-    @if $i == 3
-        .m-#{$i}
-            margin: ($spacer) !important
-        .m-t-#{$i}
-            margin-top: ($spacer) !important
-        .m-r-#{$i}
-            margin-right: ($spacer) !important
-        .m-b-#{$i}
-            margin-bottom: ($spacer) !important
-        .m-l-#{$i}
-            margin-left: ($spacer) !important
-        .p-#{$i}
-            padding: ($spacer) !important
-        .p-t-#{$i}
-            padding-top: ($spacer) !important
-        .p-r-#{$i}
-            padding-right: ($spacer) !important
-        .p-b-#{$i}
-            padding-bottom: ($spacer) !important
-        .p-l-#{$i}
-            padding-left: ($spacer) !important
-    @if $i == 4
-        .m-#{$i}
-            margin:  ($spacer * 1.5) !important
-        .m-t-#{$i}
-            margin-top: ($spacer * 1.25) !important
-        .m-r-#{$i}
-            margin-right: ($spacer * 1.25) !important
-        .m-b-#{$i}
-            margin-bottom: ($spacer * 1.25) !important
-        .m-l-#{$i}
-            margin-left: ($spacer * 1.25) !important
-        .p-#{$i}
-            padding:  ($spacer * 1.5) !important
-        .p-t-#{$i}
-            padding-top: ($spacer * 1.25) !important
-        .p-r-#{$i}
-            padding-right: ($spacer * 1.25) !important
-        .p-b-#{$i}
-            padding-bottom: ($spacer * 1.25) !important
-        .p-l-#{$i}
-            padding-left: ($spacer * 1.25) !important
-
-    @if $i == 5
-        .m-#{$i}
-            margin: ($spacer * 3) !important
-        .m-t-#{$i}
-            margin-top: ($spacer * 3) !important
-        .m-r-#{$i}
-            margin-right: ($spacer * 3) !important
-        .m-b-#{$i}
-            margin-bottom: ($spacer * 3) !important
-        .m-l-#{$i}
-            margin-left: ($spacer * 3) !important
-        .p-#{$i}
-            padding: ($spacer * 3) !important
-        .p-t-#{$i}
-            padding-top: ($spacer * 3) !important
-        .p-r-#{$i}
-            padding-right: ($spacer * 3) !important
-        .p-b-#{$i}
-            padding-bottom: ($spacer * 3) !important
-        .p-l-#{$i}
-            padding-left: ($spacer * 3) !important
-
-ul.inline
-    li
-        display: inline-block
-        margin-right: 1em
-
-
-.floating-right
-    position: absolute
-    top: 0
-    right: 0 
-i
-    &.floating-right
-        @extend .primary-light
-        font-size: 30px
-        // @extend .floating.right
+// Nosotros
+$nosotros-h4-color: color('brown', 'base')

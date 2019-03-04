@@ -1,0 +1,118 @@
+.banner
+   width: 100%
+   min-height: 500px
+   overflow: hidden
+   position: relative
+   padding: 4rem 0
+   &> img
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+   .detail-center
+      position: absolute
+      width: 100%
+      // height: 100%
+      top: 50%
+      left: 0
+      @include translate(0, -50%)
+      h1
+         color: $third-color
+      p
+         font-size: 30px
+         font-weight: 300
+         color: $primary-color
+         padding-bottom: 0
+         &.bold
+            font-weight: bold
+            font-size: 40px
+         &.simple
+            font-size: 30px
+
+.welcome
+
+.inscribete
+   overflow: hidden
+   margin: 0
+   h1
+      color: $white
+   p
+      font-size: 25px
+      color: $white
+      font-weight: 300
+      padding-top: 4rem
+      padding-bottom: 4rem
+   img
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+      z-index: -1
+
+.ponentes
+   background: rgba(gray,0.2)
+   h1
+      color: $third-color
+.list-info
+   background: $white
+   display: flex
+   // width: 50%
+   flex-direction: row
+   .cont
+      padding: 0
+      // flex: 1 1 auto
+      // width: 50%
+      // display: block
+      display: flex
+      flex-direction: row-reverse
+      overflow: hidden
+      .info
+         display: flex
+         flex-direction: column
+         align-items: center
+         justify-content: center
+         padding: 1rem
+         box-sizing: border-box
+         h4
+            color: $primary-color
+            font-weight: 600
+            font-size: 25px
+         span
+            font-size: 18px
+            font-weight: 300
+            padding: 1rem 0
+         a
+            display: block
+            font-size: 25px
+            font-weight: 600
+            color: $second-color
+      & > div
+         flex: 0 0 50%
+      .foto 
+         overflow: hidden
+         img
+            width: auto
+            height: 100%
+   .cont:nth-child(2n + 1), .cont:nth-child(2n + 2)
+      flex-direction: row
+   .cont:nth-child(4n + 1),.cont:nth-child(4n + 2)
+      flex-direction: row-reverse
+   &.orden-comunicaciones
+      .cont:nth-child(2n)
+         flex-direction: row
+      .cont:nth-child(2n+ 1) 
+         flex-direction: row-reverse
+.franja
+   position: relative
+   min-height: auto
+   height: 150px
+   img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+
+.comunicaciones
+   margin: 0
+   background: rgba(gray, 0.2)

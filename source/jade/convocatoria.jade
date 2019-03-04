@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+    - var home = true
+    - var organization = true
+    include _utils/head
+    body
+        //- Mixins
+        include _utils/mixins  
+        //- Header
+        include _components/header
+
+        //- Menu
+        //- include _components/sidenav
+        
+        //- Module Principal
+        include _modules/convocatoria
+        //- Footer
+        include _components/footer
+        //- Script Footer
+        include _utils/footer
+        //- //include _components/button
+        //- //include _components/card
+        //- //include _components/typography
+        //- //include _components/grid
+        //- include _components/table

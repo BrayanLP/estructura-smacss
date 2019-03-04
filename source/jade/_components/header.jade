@@ -1,22 +1,25 @@
-header
-    .container-brand-header
-        .container-logo-brand
-            img(src="assets/images/logo-elastika-white.svg", alt="", srcset="" class="image-logo-header")
-        .container-description-brand
-            span
-                | •  Almacenamiento en la nube
-    .container-searcher-header
-        i.material-icons.searcher-icon
-            | search
-        input(placeholder='Busca funcionalidades, Apps, Espacios ...')
-    .container-user-header
-        .container-user-alerts
-            i.material-icons
-                | notifications
-            i.material-icons.help-icon
-                | live_help
-        .container-user-profile
-            span.user-name
-                | Sebatián Osses
-            i.material-icons
-                | account_circle
+header.row.center-xs
+    .container
+
+        .container-brand-header
+            .container-logo-brand
+                a(href="index.html")
+                    img(src="assets/logo.svg", alt="", srcset="" class="image-logo-header")
+            
+        
+        .container-navbar-header
+            nav
+                ul
+                
+                    li
+                        a(href="bienvenidos.html") El congreso    
+                    li
+                        a(href="inscripcion.html") Inscripción
+                    li
+                        a(href="ponentes.html") Ponentes
+                    li
+                        a(href="convocatoria.html") Convocatoria
+                    li
+                        a(href="#programa") Programa
+                    li
+                        a(href="#comunicaciones") Comunicaciones

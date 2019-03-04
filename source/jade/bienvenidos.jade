@@ -1,0 +1,18 @@
+doctype html
+html(lang="es")
+    - var home = true
+    - var organization = true
+    include _utils/head
+    body
+        //- Mixins
+        include _utils/mixins  
+        //- Header
+        include _components/header
+ 
+        
+        //- Module Principal
+        include _modules/congreso
+        //- Footer
+        include _components/footer
+        //- Script Footer
+        include _utils/footer 

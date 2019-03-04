@@ -93,9 +93,9 @@ gulp.task('build:sass', function() {
       }).on('error', sass.logError)
     )
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'))
-    .pipe(gulp.dest('../dashboard-cloud-surquillo/src/'))
-    .pipe(gulp.dest('../framework-rcp/example/src/'));
+    .pipe(gulp.dest('./congreso-bellas-artes/css'));
+  //.pipe(gulp.dest('../dashboard-cloud-surquillo/src/'))
+  //.pipe(gulp.dest('../framework-rcp/example/src/'));
 });
 
 gulp.task('build:jade', function() {
@@ -111,7 +111,7 @@ gulp.task('build:jade', function() {
         this.emit('end');
       })
     )
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./congreso-bellas-artes/'));
 });
 
 // Procesamos todos los scripts y los agregamos en un solo archivo, ademas los verificamos para ver si hay incompatibilidades
@@ -161,7 +161,7 @@ function compileJade(file) {
         this.emit('end');
       })
     )
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./congreso-bellas-artes/'))
     .pipe(
       notify({
         message: 'File <%= file.relative %> builded!'
@@ -200,7 +200,7 @@ gulp.task('go-jade', function() {
   return gulp
     .src('source/jade/**.jade')
     .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./congreso-bellas-artes'));
 });
 
 // Esto ejecuta solo una vez SASS Y JADE

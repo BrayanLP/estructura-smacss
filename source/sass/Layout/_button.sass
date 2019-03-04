@@ -9,31 +9,38 @@ button, a
     border: none
   &.btn
     border: none
-    border-radius: 23px
     height: 40px
     line-height: 40px
     min-width: 110px
     width: auto
-    font-size: 16px
+    font-size: 14px
     text-align: center
     text-decoration: none
     cursor: pointer
     outline: none
     padding: 0 1.5em !important
     display: inline-block
+    font-weight: 600
 
   &.btn-primary
-    background: linear-gradient(90deg, $primary-light 0%, $primary-base 100%)
+    background: $third-color
     color: $white
     //transition: all 1s 
     // transition: background .3s ease
     //transition: background .8s
     &:hover
-      background: $primary-base
+      background: $third-color
+    
+  &.btn-alt-primary
+    background: $white
+    color: $third-color
+  &.btn-second
+    background: $primary-color
+    color: $white
   &.btn-outline--dark
     background-color: transparent
-    border: 2px solid $dark
-    color: $dark
+    // border: 2px solid $dark
+    // color: $dark
     &:hover
       background-color: #143752
       color: white
@@ -46,15 +53,15 @@ button, a
       color: #262D33
   &.btn-alert
     color: $white
-    background-color: $danger
+    // background-color: $danger
   &.btn-thinner
     height: 25px
     font-size: 12.8px
     line-height: 17px
     padding: 0
   &.btn-withoutline
-    color: $secondary
+    color: $secondary-color
     background-color: transparent
     &:hover
-      color: $secondary
+      color: $secondary-color
       background-color: #EAF3FB

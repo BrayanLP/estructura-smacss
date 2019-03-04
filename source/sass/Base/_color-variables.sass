@@ -1,0 +1,30 @@
+$purple: ('base': #8B50BC, "lighten-1": #C673D7)
+
+$blue: ('base': #2D83D2, 'lighten-1': #F4F7FC,'lighten-2': #f5f8fc, 'darken-1': #143752)
+
+$yellow: ( 'base': #F5CB35, 'lighten-1': #F5FFF1)
+
+$grey: ('base': #ffffff, 'lighten-1': #FAFCFF, 'lighten-2': #F0F2F5, 'lighten-3': #E6E8EB, 'lighten-4': #EAF3FB, 'darken-1': #D0DBED, 'darken-2': #d9e2f2, 'darken-3': #565F66)
+
+$red: ('base': #F74758 )  
+
+$green: ('base': #00B78B)
+
+$shades:  ('black': #000000, 'white': #fff, 'transparent': transparent)
+
+$brown: ('base': #262D33, 'lighten-1': #565F66)
+
+$colors:  ('red': $red,  'purple': $purple,  'blue': $blue, 'green': $green,  'yellow': $yellow,  'grey': $grey, 'brown': $brown,  'shades': $shades) !default
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+@function color($color, $type)
+   // @warn "Color =>>>>> `#{$color}` - `#{$type}`"
+   @if map-has-key($colors, $color)
+      $curr_color: map-get($colors, $color)
+      // @warn "Devolvio =>>>>> `#{$curr_color}`"
+      @if map-has-key($curr_color, $type)
+         @return map-get($curr_color, $type)
+   @warn "Unknown `#{$color}` - `#{$type}` in $colors."
+   @return null

@@ -1,35 +1,39 @@
 header
-  position: fixed
+  //  position: fixed
   left: 0
   width: 100%
   // padding: 16px 20px
-  background-color: $dark
-  color: $white
+  background-color: white
+  // color: $white
   display: flex
   justify-content: space-between
-  height: 50px
+  height: auto
   z-index: 996 
   padding: 0 1em
   box-sizing: border-box
+  margin: 0 auto
+  .container
+    display: flex
+    justify-content: space-between
 .container-brand-header
   display: flex
   flex-direction: row
   align-items: center
-  color: $white
+  // color: $white
 .container-logo-brand
   margin-right: 24px
   cursor: pointer
 .container-description-brand
   span
     font-size: 12.8px
-    color: $darker-brand
+    // color: $darker-brand
     font-weight: 300
 .container-searcher-header
   display: none
   //display: flex
   justify-content: center
   align-items: center
-  background-color: $text-light
+  // background-color: $text-light
   padding: 4px 6px
   border-radius: 3px
   input
@@ -39,19 +43,58 @@ header
     padding: 0 4px
     outline: none
   i.searcher-icon
-    color: $darker-brand
+    // color: $darker-brand
     padding: 0px 2px
-.container-user-header
+.container-navbar-header
   display: flex
-  color: $darker-brand
+  align-items: flex-end
+  // color: $darker-brand
   font-weight: 300
+  justify-content: flex-end
+  nav
+    height: 50px
+    // background: red
+    vertical-align: middle
+    line-height: 50px
+    ul
+      
+      li
+        display: inline-block
+        padding: 0 0.5rem
+        overflow: hidden
+        a
+          font-size: 14px
+          font-weight: 600
+          color: $primary-color
+          display: block
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            bottom: -3px
+            left: 0
+            width: 100%
+            background: $third-color
+            height: 3px
+            @include transition(0.3s all)
+          &:hover
+            color: $third-color
+            &:after
+              bottom: 0
+          &.active
+            background: initial
+            color: $third-color
+            &:after
+              bottom: 0
+              
+
 .container-user-alerts
   display: flex
   justify-content: center
   align-items: center
   margin-right: 23px
   padding-right: 23px
-  border-right: 1px solid $text-lighter
+  // border-right: 1px solid $text-lighter
   i
     color: $white
     cursor: pointer
@@ -60,7 +103,7 @@ header
     margin-left: 24px
 .container-user-profile
   i
-    color: $white
+    // color: $white
     cursor: pointer
     font-size: 1.8em
   display: flex
@@ -68,10 +111,10 @@ header
   align-items: center
   span.user-name
     margin-right: 10px
-    color: $darker-brand
+    // color: $darker-brand
     font-family: 'IBM Plex Sans', sans-serif
 .image-logo-header
-  width: 115px
+  width: 180px
     
 // textarea:focus, input:focus 
 //   color: $white
@@ -80,3 +123,19 @@ header
 // input, select, textarea
 //   color: $white
     
+
+.titulo
+  position: relative
+  text-align: center
+  height: 150px
+  line-height: 150px
+  vertical-align: middle
+  img
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
+  h1
+    color: $white
